@@ -16,14 +16,14 @@ class BlogUser extends Model
     /**
      * 关联表主键
      */
-    public $primaryKey = 'id';
+    public $primaryKey = 'user_id';
 
     /**
      * 允许被操作的字段
      * @var array
      */
     protected $fillable = [
-        'username','password'
+        'user_name','user_pass'
     ];
 
     /**

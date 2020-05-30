@@ -39,7 +39,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-        $res = BlogUser::create(['username'=>$input['username'],'password'=>md5($input['password'])]);
+        $res = BlogUser::create(['user_name'=>$input['user_name'],'user_pass'=>md5($input['user_pass'])]);
         //$res = BlogUserModel::create($input);
         if ($res) {
             return redirect('user/index');
@@ -64,7 +64,7 @@ class UserController extends Controller
     {
         $input = $request->post();
         $user = BlogUser::find($input['id']);
-        $res = $user->update(['username'=> $input['username']]);
+        $res = $user->update(['user_name'=> $input['user_name']]);
         if ($res) {
             return redirect('user/index');
         } else {

@@ -19,10 +19,10 @@
     </tr>
     @foreach($user as $v)
         <tr>
-            <td>{{$v->id}}</td>
-            <td>{{$v->username}}</td>
-            <td>{{$v->password}}</td>
-            <td><a href="/user/edit/{{$v->id}}">修改</a> <a href="javascript:void(0);" onclick="del_member(this,{{$v->id}});">删除</a></td>
+            <td>{{$v->user_id}}</td>
+            <td>{{$v->user_name}}</td>
+            <td>{{$v->user_pass}}</td>
+            <td><a href="/user/edit/{{$v->user_id}}">修改</a> <a href="javascript:void(0);" onclick="del_member(this,{{$v->user_id}});">删除</a></td>
         </tr>
     @endforeach
 </table>
